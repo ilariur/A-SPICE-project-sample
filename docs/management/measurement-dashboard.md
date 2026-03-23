@@ -9,19 +9,17 @@
 
 ## Product Quality Measures
 
-| Measure | Target | Current Status | Evidence Source | Notes |
-|---|---|---|---|---|
-| Requirements traced | 100% | 14/14 SW requirements traced | `docs/traceability/traceability-matrix.md` (baseline 44a7d7c) | All traced and verified |
-| Poll interval conformance | 5000 ms exact in simulated scheduler | Confirmed in smoketest | Unit and integration tests | Deterministic scheduling verified |
-| Unit test pass rate | 100% of planned unit tests | 14/14 UT passed, baseline 44a7d7c | `build/day_night_tests` | Unit verification complete |
-| **Unit test report artifact** | SWE.4 evidence required | **Missing — CR-002 assigned** | — | **Critical finding: produce report by M5+1** |
-| Integration smoke checks | 100% pass | 100% pass, baseline 44a7d7c | Integration strategy checklist | All critical paths verified |
-| Integration scenario pass rate | 100% of executed scenarios | 12/12 passed, baseline 44a7d7c | `docs/integration/software-integration-test-report.md` | Includes negative-path (malformed, delayed, missing frame) |
-| Qualification scenario pass rate | 100% of executed scenarios | 11/11 passed, baseline 44a7d7c | `docs/test/software-qualification-test-report.md` | Covers all feature scenarios |
-| Negative-path CAN scenario pass rate | 100% of executed malformed or missing-response scenarios | 3/3 passed (malformed, delayed, missing), baseline 44a7d7c | `build/day_night_simulation` | Robustness coverage verified |
-| Timeout fault scenario pass rate | 100% of executed timeout and recovery scenarios | 2/2 passed, baseline 44a7d7c | `build/day_night_tests`, `build/day_night_simulation` | Fault entry/exit, recovery verified |
-| Diagnostic fault message scenario pass rate | 100% of executed diagnostic active/clear scenarios | 2/2 passed, baseline 44a7d7c | `build/day_night_tests`, `build/day_night_simulation` | CAN ID 0x540 transmit/consume verified |
-| Open high-severity defects | 0 | 0 | Problem resolution log | No outstanding issues |
+| Measure | Target | Evidence Source | Current Status | Baseline | Date |
+|---|---|---|---|---|---|
+| Requirements traced | 100% | `docs/traceability/traceability-matrix.md` | 13/13 SWE mapped | 44a7d7c | 2026-03-23 |
+| Poll interval conformance | 5000 ms exact | Unit and integration tests | Pass (verified in UT-001–003) | 44a7d7c | 2026-03-23 |
+| Unit test pass rate | 100% | `build/day_night_tests` | 14/14 pass | 44a7d7c | 2026-03-23 |
+| Integration scenario pass rate | 100% | `build/day_night_simulation` | 12/12 pass (IT-001–008) | 44a7d7c | 2026-03-23 |
+| Qualification scenario pass rate | 100% | `build/day_night_simulation` | 11/11 pass (QT-001–010) | 44a7d7c | 2026-03-23 |
+| Timeout fault scenario pass rate | 100% | UT-011–014, IT-007, QT-009–010 | 6/6 pass | 44a7d7c | 2026-03-23 |
+| Diagnostic fault message scenario pass rate | 100% | IT-008, QT-010 | 2/2 pass | 44a7d7c | 2026-03-23 |
+| Open high-severity defects | 0 | Problem resolution log | 0 defects | 44a7d7c | 2026-03-23 |
+| Residual medium-or-higher risks | ≤ 2 (accepted) | Risk register with priority ratings | 4 open, all accepted per decision | 0b5873a | 2026-03-25 |
 
 ---
 
