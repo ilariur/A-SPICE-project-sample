@@ -1,0 +1,18 @@
+---
+Revision: 1.2
+Date: 2026-03-27
+Author: Project Manager
+Status: Approved
+---
+
+# Risk Register
+
+| ID | Risk | Likelihood | Severity | Priority | Related | Impact | Mitigation | Owner | Status | Management Decision |
+|---|---|---|---|---|---|---|---|---|---|---|
+| R-001 | CAN message IDs may conflict with vehicle allocation | M | H | H | R-007 | Integration delay, possible reallocation of IDs | Keep IDs provisional in `can_protocol.hpp`; confirm with network owner during vehicle integration | Project Manager | Open | Accept residual; monitor during vehicle integration; CR-008 tags baseline to help track |
+| R-002 | Threshold calibration may not match actual sensor behavior | M | M | M | Wrong state decisions | Use tunable thresholds in `ControllerConfig` and qualify with recorded luminance traces | Requirements Engineer | Closed | Mitigation verified; thresholds now configurable in ControllerConfig |
+| R-003 | Poll response may be delayed on loaded bus | L | M | M | Stale state or delayed transitions | Keep poll interval fixed and verify query/notification timing in integration test | Software Architect | Open | Accept residual; no further action required; meets timing requirements in simulated load tests |
+| R-004 | Subscriber table overflow | L | L | L | Missed registration requests | Bound registry size to 8 and return explicit NAK status | Software Designer/Engineer | Closed | Mitigation verified in code; overflow handling tested; bounded to 8 subscribers |
+| R-005 | Query or notification behavior may be inconsistent during transition | L | L | L | Consumer sees stale state | Use single controller state update and query from one coherent snapshot | Software Tester | Closed | Mitigation verified in unit tests; correct behavior confirmed with coherent snapshots |
+| R-006 | Timeout value may need calibration against final network latency and sensor response characteristics | H | H | H | False fault entries or delayed fault detection | Keep `responseTimeoutMs` configurable; confirm final value during vehicle integration testing (CR-013) | Software Qualification Tester | Open | Accept residual; defer final tuning to vehicle integration phase; current value (6000 ms) validated in simulation |
+| R-007 | Diagnostic CAN ID or fault-code mapping may conflict with target diagnostic architecture | M | H | H | R-001 | Diagnostic events may be misinterpreted or ignored | Confirm CAN ID `0x540` allocation and fault-code contract with platform diagnostics owner | Software Architect | Open | Accept residual; flag for early vehicle integration review; CR-008 baseline tag enables issue traceability |

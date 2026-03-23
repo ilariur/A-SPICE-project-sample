@@ -1,0 +1,21 @@
+cxx = clang++
+cxxflags = -std=c++20 -Wall -Wextra -Wpedantic -O2
+
+rule cxx
+  command = $cxx $cxxflags -Isrc -MMD -MF $out.d -c $in -o $out
+  depfile = $out.d
+  deps = gcc
+
+rule link
+  command = $cxx $in -o $out
+
+build build/day_night_controller.o: cxx src/day_night_controller.cpp
+build build/main.o: cxx src/main.cpp
+build build/day_night_tests.o: cxx tests/day_night_controller_tests.cpp
+build build/day_night_simulation.o: cxx tests/day_night_simulation.cpp
+
+build build/a_spice_product: link build/day_night_controller.o build/main.o
+build build/day_night_tests: link build/day_night_controller.o build/day_night_tests.o
+build build/day_night_simulation: link build/day_night_controller.o build/day_night_simulation.o
+
+default build/a_spice_product build/day_night_tests build/day_night_simulation
