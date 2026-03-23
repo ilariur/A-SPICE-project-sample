@@ -22,10 +22,10 @@ Software unit verification (SWE.4) was executed against the Day/Night State Mana
 | **UT-003** | `tick()` at 5000 ms sends next poll | SWE-001 | Second CAN frame `0x500` | Second poll transmitted | ✅ PASS | 2026-03-23 | 44a7d7c |
 | **UT-004** | Luminance response above day threshold → `DAY` state | SWE-002 | Internal state is `DAY` | State set to `DAY` | ✅ PASS | 2026-03-23 | 44a7d7c |
 | **UT-005** | Query request returns client ID, state, age | SWE-003 | Response `0x511` with correct fields | Query response frame issued | ✅ PASS | 2026-03-23 | 44a7d7c |
-| **UT-006** | Subscribe request returns `OK` | SWE-004 | ACK frame `0x521` status `OK` | Subscribe ACK sent | ✅ PASS | 2026-03-23 | 44a7d7c |
-| **UT-007** | Duplicate subscribe returns `ALREADY_REGISTERED` | SWE-004 | ACK `0x521` status `ALREADY_REGISTERED` | Duplicate rejection sent | ✅ PASS | 2026-03-23 | 44a7d7c |
+| **UT-006** | Subscribe request returns `OK` | SWE-007 | ACK frame `0x521` status `OK` | Subscribe ACK sent | ✅ PASS | 2026-03-23 | 44a7d7c |
+| **UT-007** | Duplicate subscribe returns `ALREADY_REGISTERED` | SWE-007 | ACK `0x521` status `ALREADY_REGISTERED` | Duplicate rejection sent | ✅ PASS | 2026-03-23 | 44a7d7c |
 | **UT-008** | State change `DAY`→`NIGHT` sends notification | SWE-005 | One frame `0x530` per subscriber | Notifications broadcast | ✅ PASS | 2026-03-23 | 44a7d7c |
-| **UT-009** | Unsubscribe removes client, returns `OK` | SWE-004 | ACK `0x521` status `OK` | Unsubscribe ACK sent | ✅ PASS | 2026-03-23 | 44a7d7c |
+| **UT-009** | Unsubscribe removes client, returns `OK` | SWE-007 | ACK `0x521` status `OK` | Unsubscribe ACK sent | ✅ PASS | 2026-03-23 | 44a7d7c |
 | **UT-010** | Unregistered client no notifications | SWE-005 | No `0x530` for removed client | Client excluded from broadcast | ✅ PASS | 2026-03-23 | 44a7d7c |
 | **UT-011** | Missing response beyond timeout → `FAULT` state | SWE-009 | State `FAULT`, notification sent | Timeout transition executed | ✅ PASS | 2026-03-23 | 44a7d7c |
 | **UT-012** | Valid response after `FAULT` recovers state | SWE-010 | Notification reports recovery | Recovery state notification sent | ✅ PASS | 2026-03-23 | 44a7d7c |
@@ -80,10 +80,10 @@ All 14 tests trace to allocated requirements in [software-requirements.md](../re
 | SWE-001 | UT-001, UT-002, UT-003 | ✅ Verified |
 | SWE-002 | UT-004 | ✅ Verified |
 | SWE-003 | UT-005 | ✅ Verified |
-| SWE-004 | UT-006, UT-007, UT-009 | ✅ Verified |
+| SWE-004 | (Unit test scope covered; subscription mgmt integration aspect) | — |
 | SWE-005 | UT-008, UT-010 | ✅ Verified |
 | SWE-006 | (Integration test scope) | — |
-| SWE-007 | (Integration test scope) | — |
+| SWE-007 | UT-006, UT-007, UT-009 | ✅ Verified |
 | SWE-008 | (Integration test scope) | — |
 | SWE-009 | UT-011 | ✅ Verified |
 | SWE-010 | UT-012 | ✅ Verified |
