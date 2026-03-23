@@ -1,0 +1,73 @@
+---
+Language: Cpp
+Standard: C++20
+BasedOnStyle: LLVM
+
+# Indentation
+IndentWidth: 2
+UseTab: Never
+TabWidth: 2
+
+# Spacing
+ColumnLimit: 100
+ContinuationIndentWidth: 2
+PointerAlignment: Left
+ReferenceAlignment: Left
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: true
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+
+# Brackets and braces
+BraceWrapping:
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterObjCDeclaration: false
+  AfterStruct: false
+  AfterUnion: false
+  BeforeCatch: false
+  BeforeElse: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+BreakBeforeBraces: Attach
+
+# Line breaks
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: MultiLine
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+
+# Sorting and alignment
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex: '^<.*'
+    Priority: 1
+  - Regex: '^".*'
+    Priority: 2
+SortIncludes: CaseSensitiveStrict
+SortUsingDeclarations: true
+
+# Function parameters and arguments
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: false
+BinPackArguments: true
+BinPackParameters: true
+
+# Other
+FixNamespaceComments: true
+ReflowComments: true
+SortUsingDeclarations: true

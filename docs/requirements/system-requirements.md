@@ -1,3 +1,10 @@
+---
+Revision: 1.0
+Date: 2026-03-09
+Author: Requirements Engineer
+Status: Approved
+---
+
 # System Requirements
 
 | ID | Requirement | Verification Method |

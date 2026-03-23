@@ -1,3 +1,10 @@
+---
+Revision: 1.0
+Date: 2026-03-09
+Author: Requirements Engineer
+Status: Approved
+---
+
 # Stakeholder Requirements
 
 | ID | Requirement | Acceptance Criteria |

@@ -1,3 +1,10 @@
+---
+Revision: 1.1
+Date: 2026-03-26
+Author: Project Manager
+Status: Approved
+---
+
 # Status Review Record: M5 Final and Corrective Action Planning
 
 **Review Date:** 2026-03-23  

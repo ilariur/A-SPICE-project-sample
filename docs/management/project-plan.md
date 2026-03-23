@@ -1,3 +1,10 @@
+---
+Revision: 2.1
+Date: 2026-03-26
+Author: Project Manager
+Status: Approved
+---
+
 # Project Plan
 
 ## Scope

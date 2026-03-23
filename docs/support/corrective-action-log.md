@@ -1,3 +1,10 @@
+---
+Revision: 2.0
+Date: 2026-03-26
+Author: Project Manager
+Status: Approved
+---
+
 # Corrective Action Log
 
 **Assessment Baseline:** 2026-03-23  

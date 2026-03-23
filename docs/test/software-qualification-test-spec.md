@@ -1,3 +1,10 @@
+---
+Revision: 1.0
+Date: 2026-03-23
+Author: Software Qualification Tester
+Status: Approved
+---
+
 # Software Qualification Test Specification
 
 ## Operational Context

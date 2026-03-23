@@ -1,3 +1,10 @@
+---
+Revision: 1.1
+Date: 2026-03-23
+Author: Requirements Engineer
+Status: Approved
+---
+
 # Traceability Matrix
 
 | Stakeholder | System | Software | Design/Code | Verification |

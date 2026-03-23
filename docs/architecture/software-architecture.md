@@ -1,3 +1,10 @@
+---
+Revision: 1.1
+Date: 2026-03-23
+Author: Software Architect
+Status: Approved
+---
+
 # Software Architecture
 
 ## Software Elements

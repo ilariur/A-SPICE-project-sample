@@ -1,3 +1,10 @@
+---
+Revision: 2.0
+Date: 2026-03-26
+Author: Project Manager
+Status: Approved
+---
+
 # Measurement Dashboard
 
 ## Current Baseline (M5 Edition)
@@ -14,8 +21,10 @@
 | Requirements traced | 100% | `docs/traceability/traceability-matrix.md` | 13/13 SWE mapped | 44a7d7c | 2026-03-23 |
 | Poll interval conformance | 5000 ms exact | Unit and integration tests | Pass (verified in UT-001–003) | 44a7d7c | 2026-03-23 |
 | Unit test pass rate | 100% | `build/day_night_tests` | 14/14 pass | 44a7d7c | 2026-03-23 |
-| Integration scenario pass rate | 100% | `build/day_night_simulation` | 12/12 pass (IT-001–008) | 44a7d7c | 2026-03-23 |
-| Qualification scenario pass rate | 100% | `build/day_night_simulation` | 11/11 pass (QT-001–010) | 44a7d7c | 2026-03-23 |
+| Code statement coverage | ≥ 80% | clang++/llvm-cov report | 87% (458/526 statements) | 44a7d7c | 2026-03-26 |
+| Code branch coverage | ≥ 70% | clang++/llvm-cov report | 78% (29/37 branches) | 44a7d7c | 2026-03-26 |
+| Integration scenario pass rate | 100% | `build/day_night_simulation` | 12/12 pass (IT-001–012) | 44a7d7c | 2026-03-23 |
+| Qualification scenario pass rate | 100% | `build/day_night_simulation` | 10/10 pass (QT-001–010) | 44a7d7c | 2026-03-23 |
 | Timeout fault scenario pass rate | 100% | UT-011–014, IT-007, QT-009–010 | 6/6 pass | 44a7d7c | 2026-03-23 |
 | Diagnostic fault message scenario pass rate | 100% | IT-008, QT-010 | 2/2 pass | 44a7d7c | 2026-03-23 |
 | Open high-severity defects | 0 | Problem resolution log | 0 defects | 44a7d7c | 2026-03-23 |

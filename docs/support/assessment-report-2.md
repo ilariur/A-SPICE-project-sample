@@ -1,3 +1,10 @@
+---
+Revision: 1.0
+Date: 2026-03-23
+Author: A-SPICE Certified Assessor
+Status: Final
+---
+
 # A-SPICE Assessment Report — Assessment 2
 
 **Project:** Luminance Day/Night State Manager  

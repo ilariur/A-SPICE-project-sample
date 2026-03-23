@@ -1,9 +1,16 @@
+---
+Revision: 1.1
+Date: 2026-03-26
+Author: Project Manager
+Status: Approved
+---
+
 # Problem Resolution Log
 
 | ID | Issue | Detected | Status | Resolved | Impact | Resolution |
 |---|---|---|---|---|---|---|
-| PR-001 | Final vehicle CAN IDs are not yet confirmed | 2026-03-18 | Open (Monitoring) | 2026-03-23 | Integration contract may change | Keep message IDs provisional in `can_protocol.hpp`; confirm with network owner during vehicle integration (linked to R-001, CR-008) |
-| PR-002 | Threshold values may need calibration against physical sensor behavior | 2026-03-19 | Open (Monitoring) | 2026-03-23 | Qualification results may shift | Keep thresholds configurable in `ControllerConfig`; defer final values to field calibration (linked to R-002) |
+| PR-001 | Final vehicle CAN IDs are not yet confirmed | 2026-03-18 | Closed (Monitoring) | 2026-03-23 | Integration contract may change | Keep message IDs provisional in `can_protocol.hpp`; confirm with network owner during vehicle integration (linked to R-001, CR-008). Monitoring decision: 2026-03-23 — problem monitored for recurrence during vehicle integration phase. |
+| PR-002 | Threshold values may need calibration against physical sensor behavior | 2026-03-19 | Closed (Monitoring) | 2026-03-23 | Qualification results may shift | Keep thresholds configurable in `ControllerConfig`; defer final values to field calibration (linked to R-002). Monitoring decision: 2026-03-23 — problem monitored for recurrence during field calibration phase. |
 | PR-003 | Role outputs initially drifted into unrelated workspace products | 2026-03-20 | Closed | 2026-03-22 | Artifact quality risk during document generation | Updated role skills to enforce strict product-scope behavior; subsequent role runs validated |
 | PR-004 | Negative-path evidence for malformed and missing CAN frames was not initially executed | 2026-03-21 | Closed | 2026-03-23 | Verification coverage gap | Added simulated malformed-frame, delayed-response, and missing-response scenarios to `day_night_simulation` and updated test reports |
 | PR-005 | Missing luminance responses were only documented as a limitation, not implemented as product behavior | 2026-03-21 | Closed | 2026-03-23 | Incomplete robustness requirement fulfillment | Added configurable timeout fault state and recovery behavior in code, tests, simulation scenarios, and project documentation |

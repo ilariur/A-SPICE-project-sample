@@ -1,3 +1,10 @@
+---
+Revision: 1.0
+Date: 2026-03-23
+Author: Software Integration Tester
+Status: Approved
+---
+
 # Software Integration Test Specification
 
 ## Interfaces Under Test

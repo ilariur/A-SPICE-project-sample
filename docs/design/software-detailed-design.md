@@ -1,3 +1,10 @@
+---
+Revision: 1.1
+Date: 2026-03-23
+Author: Software Designer/Engineer
+Status: Approved
+---
+
 # Software Detailed Design
 
 ## Units

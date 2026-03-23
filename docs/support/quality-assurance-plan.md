@@ -1,3 +1,10 @@
+---
+Revision: 1.0
+Date: 2026-03-23
+Author: Project Manager
+Status: Approved
+---
+
 # Quality Assurance Plan
 
 ## Objectives

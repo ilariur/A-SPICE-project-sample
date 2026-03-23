@@ -1,3 +1,10 @@
+---
+Revision: 1.1
+Date: 2026-03-26
+Author: Project Manager
+Status: Approved
+---
+
 # Configuration Management Plan
 
 ## Configuration Items
