@@ -29,6 +29,7 @@
 - The simulated CAN scenario runner passed 11 of 11 combined integration and qualification scenarios, including malformed-frame, delayed-response, and missing-response cases.
 - Timeout fault behavior is now implemented end to end: query and notification paths expose `FAULT`, and recovery on valid luminance response is verified.
 - Dedicated diagnosable fault reporting is implemented alongside `FAULT` state transitions and verified in unit and simulation scenarios.
+- Software-integrator role execution completed on baseline `44a7d7ccd265a98fc03ec37c7fcb35a79345bacc` with clean rebuild and smoke evidence (`./build/a_spice_product`, `./build/day_night_tests`, `./build/day_night_simulation`) all passing.
 
 ## Artifact Index
 - `docs/management/project-plan.md`
@@ -40,6 +41,7 @@
 - `docs/architecture/software-architecture.md`
 - `docs/design/software-detailed-design.md`
 - `docs/integration/software-integration-strategy.md`
+- `docs/integration/software-integration-report.md`
 - `docs/test/software-unit-verification-spec.md`
 - `docs/test/software-integration-test-spec.md`
 - `docs/test/software-integration-test-report.md`
@@ -52,4 +54,4 @@
 
 ## Baseline Status
 - Version: `0.1.0-draft`
-- Entry status: Build-validated, unit-test-validated, and simulation-validated for integration and qualification scenarios.
+- Entry status: Build-validated, unit-test-validated, simulation-validated for integration and qualification scenarios, and SWE.5 software integration execution completed with documented handoff evidence.
