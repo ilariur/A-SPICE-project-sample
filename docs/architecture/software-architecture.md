@@ -1,10 +1,19 @@
 # Software Architecture
 
 ## Software Elements
-- `DayNightController`: central application logic, polling schedule, state machine, query handling, subscription handling
-- `CanFrameSink`: abstract transmission port used by the controller
-- `main.cpp` demo harness: simulates the external bus and prints transmitted frames
-- `day_night_tests.cpp`: verification harness using a recording sink
+
+### Product Elements
+- `DayNightController`: central application logic (product)
+- `CanFrameSink`: abstract transmission port (product interface)
+
+### Verification-Only Infrastructure
+- `src/main.cpp` — demo harness for manual testing and architecture illustration; **NOT a product deliverable**
+  - Use case: Demonstrates CAN protocol, state transitions, and subscription behavior
+  - Excluded from embedded target image; test/development only
+  - May be replaced by target-specific main and driver layer during vehicle integration
+
+### Configuration Items
+Only core product elements are under CM: `src/can_protocol.hpp`, `src/day_night_controller.hpp/cpp`, `tests/day_night_controller_tests.cpp`
 
 ## CAN Message Dictionary
 
