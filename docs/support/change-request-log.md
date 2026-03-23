@@ -20,13 +20,13 @@ Track all formal changes to product scope, architecture, design, code, test, and
 | CR-009 | Enhance problem resolution log | Add `Status`, `Detected`, and `Resolved` columns to `docs/support/problem-resolution-log.md`; populate all 6 existing PRs with dates and close status | Project Manager | P1-Major | **Completed** | 1.5h | M5+1 |
 | CR-010 | Add risk ratings to risk register | Update `docs/management/risk-register.md` to include Likelihood (H/M/L), Severity (H/M/L), and Priority columns; rate all 7 open risks | Project Manager + Risk Owners | P1-Major | **Completed** | 2h | M5+2 |
 | CR-011 | Produce status review record | Create `docs/management/status-review-m5-final-and-cr-phase.md` covering integrated baseline through test completion; record findings, decisions, and open items | Project Manager | P1-Major | **Completed** | 3h | M5+2 |
-| CR-012 | Document derived requirements | Label architectural constraints (bounded registry, configurable timeout) as derived requirements in `docs/requirements/software-requirements.md` | Requirements Engineer | P2-Observation | Open | 1h | M5+3 |
-| CR-013 | Define code coverage target | Update unit verification specification to include a coverage target (e.g., 80% statement); measure and report against baseline | Software Tester | P2-Observation | Open | 2h | M5+2 |
-| CR-014 | Reference coding standard | Add reference to a coding standard (project-local guideline or ISO/IEC standard) in quality assurance plan | Project Manager | P2-Observation | Open | 1h | M5+2 |
-| CR-015 | Clarify main.cpp classification | Update architecture and integration strategy to explicitly state whether `src/main.cpp` is a product deliverable or verification-only harness | Software Architect | P2-Observation | Open | 0.5h | M5+1 |
-| CR-016 | Update integration strategy baseline list | Add `tests/day_night_simulation.cpp` to the baseline contents list in `docs/integration/software-integration-strategy.md` | System Integration Lead | P2-Observation | Open | 0.5h | M5+1 |
-| CR-017 | Cross-reference related risks | Link R-001 and R-007 in risk register (both concern CAN ID allocation conflicts) to clarify compound impact | Project Manager | P2-Observation | Open | 0.5h | M5+1 |
-| CR-018 | Quantify measurement dashboard status | Replace narrative status entries with quantitative values, baseline ID, and date (e.g., "14/14 UT passed, 2026-03-23, 44a7d7c") | Project Manager | P2-Observation | Open | 1h | M5+2 |
+| CR-012 | Document derived requirements | Label architectural constraints (bounded registry, configurable timeout) as derived requirements in `docs/requirements/software-requirements.md` | Requirements Engineer | P2-Observation | **Completed** | 1h | M5+3 |
+| CR-013 | Define code coverage target | Update unit verification specification to include a coverage target (e.g., 80% statement); measure and report against baseline | Software Tester | P2-Observation | **Completed** | 2h | M5+2 |
+| CR-014 | Reference coding standard | Add reference to a coding standard (project-local guideline or ISO/IEC standard) in quality assurance plan | Project Manager | P2-Observation | **Completed** | 1h | M5+2 |
+| CR-015 | Clarify main.cpp classification | Update architecture and integration strategy to explicitly state whether `src/main.cpp` is a product deliverable or verification-only harness | Software Architect | P2-Observation | **Completed** | 0.5h | M5+1 |
+| CR-016 | Update integration strategy baseline list | Add `tests/day_night_simulation.cpp` to the baseline contents list in `docs/integration/software-integration-strategy.md` | System Integration Lead | P2-Observation | **Completed** | 0.5h | M5+1 |
+| CR-017 | Cross-reference related risks | Link R-001 and R-007 in risk register (both concern CAN ID allocation conflicts) to clarify compound impact | Project Manager | P2-Observation | **Completed** | 0.5h | M5+1 |
+| CR-018 | Quantify measurement dashboard status | Replace narrative status entries with quantitative values, baseline ID, and date (e.g., "14/14 UT passed, 2026-03-23, 44a7d7c") | Project Manager | P2-Observation | **Completed** | 1h | M5+2 |
 
 ---
 
@@ -55,6 +55,6 @@ Track all formal changes to product scope, architecture, design, code, test, and
 - **P1-Major CRs:** All 8 completed (CR-004 through CR-011) as of 2026-03-25 EOB
 - **M6 Corrective Action Phase:** Complete; all critical and major findings from 2026-03-23 A-SPICE assessment have been addressed
 - **Baseline Tag:** `v0.1.0-draft` applied at commit 44a7d7ccd265a98fc03ec37c7fcb35a79345bacc; documentation and risk baseline confirmed
-- **P2-Observation CRs:** 8 items open (CR-012 through CR-018); recommended for future maturity improvements
-- **Total Effort Expended (P0+P1):** 18.5 hours across roles during M6 phase
-- **Prepared for:** Extended vehicle integration testing, customer hand-off review, or operational deployment
+- **P2-Observation CRs:** All 7 completed (CR-012 through CR-018) as of 2026-03-25; maturity improvements finalized
+- **Total Effort Expended (P0+P1+P2):** 26.5 hours across roles during M6 phase
+- **Prepared for:** Extended vehicle integration testing, customer hand-off review, or operational deployment; maturity level improved with enhanced documentation and process framework
