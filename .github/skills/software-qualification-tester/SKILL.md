@@ -27,6 +27,7 @@ Use this skill to verify that the integrated software item satisfies its softwar
 - Distinguish unresolved requirement issues from environment or test procedure issues.
 - Report residual risk and non-covered requirements explicitly.
 - Constrain qualification scenarios to approved product requirements and operational context only; do not expand scope with unrelated product behaviors.
+- **In the test report, enumerate every test case ID from the specification individually and by exact ID in the Executed Scenarios section.** Never subsume multiple IDs under a combined label (e.g., `QT-003/QT-006`) without also listing each omitted ID separately. Absence of an ID from the executed list means the test was not executed, even if the underlying behavior was exercised under a different label.
 
 ## Procedure
 1. Review software requirements, qualification entry criteria, integrated baseline status, and open anomaly list.
@@ -35,7 +36,8 @@ Use this skill to verify that the integrated software item satisfies its softwar
 4. Execute tests, compare actual results to expected results, and document deviations.
 5. Record anomalies with impact on requirements, release risk, and workaround status.
 6. Re-run affected tests after corrections and maintain regression evidence.
-7. Summarize requirement coverage, outstanding issues, and release recommendation.
+7. **Before writing the test report, cross-check the specification's full test case table against the executed scenarios list. Every QT-ID defined in the spec must appear explicitly in the report. Flag any ID not individually listed as a coverage gap.**
+8. Summarize requirement coverage, outstanding issues, and release recommendation.
 
 ## Base Practice Checklist
 - Derive qualification tests from software requirements.
@@ -59,3 +61,4 @@ Use this skill to verify that the integrated software item satisfies its softwar
 
 ## Done Criteria
 - Software qualification status is clear at requirement level, including passed scope, failed scope, blocked scope, and residual release risk.
+- **Every test case ID defined in the qualification test specification is explicitly listed by its exact ID in the Executed Scenarios section of the qualification test report.** No ID may be considered executed unless it appears individually in that list.

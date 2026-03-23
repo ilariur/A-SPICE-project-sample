@@ -28,6 +28,7 @@ Use this skill to plan and control delivery so commitments remain realistic, ris
 - Keep quality, integration, and test readiness inside the plan, not as downstream assumptions.
 - Reconcile project status with configuration status, open defects, and requirement coverage.
 - Define the document inventory and evidence package early when the task requires assessment-ready work products.
+- **Before marking any change request or corrective action complete, read the affected artifact and verify the exit criteria are met in the work product itself.** Never close a CR based on role self-reporting, commit messages, or log status alone. If the artifact cannot be read and confirmed, the CR status must remain open.
 
 ## Procedure
 1. Define project scope, deliverables, lifecycle, milestones, work packages, interfaces, and responsibilities.
@@ -65,3 +66,4 @@ Use this skill to plan and control delivery so commitments remain realistic, ris
 ## Done Criteria
 - The team can explain current status, next major risks, and the recovery path using objective data.
 - Plan, measures, risk log, and engineering reality are consistent.
+- **Each closed CR has been artifact-verified: the affected work product was read and the exit criteria confirmed directly, not inferred from role self-reporting.**
