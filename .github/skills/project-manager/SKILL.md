@@ -46,14 +46,16 @@ Use this skill to plan and control delivery so commitments remain realistic, ris
 7. Maintain the risk register with triggers, owners, mitigation actions, and residual exposure.
 8. When variance appears, decide corrective action: replanning, scope adjustment, staffing, sequencing, technical containment, or escalation.
 9. Keep stakeholders aligned by updating plans, decisions, dependencies, and commitment dates.
+10. **Execute and record QA audit activities (SUP.1 contribution):** For each planned quality activity (requirements review, architecture review, design review, test readiness, traceability check), conduct the activity and create a QA audit record documenting: activity date, scope/artifact reviewed, items checked, findings (defects/observations or "no findings"), and disposition (accepted/rework). Maintain a QA audit log and cross-reference to corrective actions.
 
-## Base Practice Checklist
-- Establish and maintain an executable project plan.
-- Define responsibilities, resources, schedules, dependencies, and commitments.
-- Monitor actual progress, measures, and deliverable status.
-- Manage project risks with analysis, treatment, and tracking.
-- Take corrective action on deviations and record decisions.
-- Report status using current objective data and agreed indicators.
+## Base Practice Checklist (PA 1.1 Completeness for MAN.3/MAN.6/SUP.1/SUP.9)
+- **Project plan completeness (MAN.3):** Scope, deliverables, milestones, work packages, roles, resources, dependencies, assumptions, quality gates, and reviews are defined. Effort and schedule estimates are justified.
+- **Measurement completeness (MAN.6):** Progress metrics, requirement coverage, defect tracking, build health, test completion, risk exposure, code coverage, and quality indicators are defined. All metrics are collected, recorded, and trended.
+- **Status review completeness (MAN.3):** Milestone status, milestone dates (target vs. actual), variance, corrective action, risks, and management decisions are recorded. Attendees are named; decisions are documented with owners and dates.
+- **Corrective action completeness (MAN.3):** CR log reflects all changes. CA log status matches CR status (completed CAs have completed CRs). Date consistency across plan, status review, and dashboard. All effort variance is explained.
+- **Problem resolution completeness (SUP.9):** All problems are tracked with ID, status, detected date, resolution date, priority, and impact. Status values are consistent and non-contradictory. No orphaned or undocumented problems.
+- **Quality assurance completeness (SUP.1):** All planned QA activities (requirements review, architecture review, design review, test readiness, traceability check, etc.) are executed and recorded in a QA audit log. Each audit record includes activity date, scope, items checked, findings, and disposition. Defects and observations are escalated to CR or CA logs.
+- **Report status using current objective data and agreed indicators.**
 
 ## Expected Outputs
 - Project plan and milestone plan
@@ -69,13 +71,14 @@ Use this skill to plan and control delivery so commitments remain realistic, ris
 - Review minutes with actions and owners
 - Trend data for schedule, quality, and integration readiness
 
-## Done Criteria
-- The team can explain current status, next major risks, and the recovery path using objective data.
-- Plan, measures, risk log, and engineering reality are consistent.
-- **Each closed CR has been artifact-verified: the affected work product was read and the exit criteria confirmed directly, not inferred from role self-reporting.**
-- Corrective action log reflects actual closure state: all completed CRs have corresponding CA status = "Completed".
-- All management artifact dates (project plan, status review, measurement dashboard) are reconciled. If discrepancies exist, they are explicitly documented and a single authoritative date is recorded.
-- Effort or quality variances between plan and actuals are documented with explanation; no silent gaps.
-- No placeholder text remains in finalized formal records.
-- Problem resolution log uses consistent, non-contradictory status values; Resolved dates match status correctly.
-- All managed work products carry version/date/author/status headers for assessment readiness.
+## Done Criteria (PA 1.1 Fully Achieved for MAN.3/MAN.6/SUP.1/SUP.9)
+- **MAN.3 (Project Management):** The project plan is complete, milestones have target and actual dates, all variances are documented with recovery actions, corrective actions are tracked and closed, status review records are complete with named attendees and decisions, all CR and CA logs are fully populated and consistent.
+- **MAN.6 (Measurement):** All defined metrics are collected. Product quality measures (test pass rates, coverage, requirement completeness) include quantitative values, baseline hash, and date. Project management measures (schedule variance, effort variance, risk count) are recorded and trended. Quality variances are documented with explanation.
+- **SUP.1 (Quality Assurance):** All planned QA activities have been executed and documented in a QA audit log. Each audit record includes date, scope, items checked, findings (or "no findings"), and disposition. Any findings are escalated to CR or CA logs. Quality activities cover the full lifecycle (requirements through release).
+- **SUP.9 (Problem Resolution):** All detected problems are logged with ID, status, detected date, resolution date (if resolved), impact, and priority. Problem status values are consistent and non-contradictory. No problems remain orphaned or undocumented.
+- **Each closed CR has been artifact-verified:** the affected work product was read and exit criteria confirmed directly, not inferred from role reporting.
+- **All management artifact dates are reconciled:** project plan, status review, and measurement dashboard show consistent milestone actual dates. Any discrepancies are explicitly documented and resolved.
+- **Effort and quality variances are explained:** no silent gaps between plan and actuals.
+- **No placeholder text remains:** all formal records use concrete names, dates, and values.
+- **All managed work products carry revision/date/author/status headers.**
+- **Evidence of comprehensive execution:** all plan/measurement/control/audit processes are documented, traceable, and demonstrate that project management was actively performed, not retrospectively inferred.

@@ -42,12 +42,13 @@ Use this skill to verify software units against detailed design and allocated re
 8. **Execute coverage measurement if specified:** Run coverage tooling (clang++ profiling, llvm-cov, etc.); measure and record actual statement and branch coverage percentages. Compare to targets and note any gaps.
 9. Report verification status, gaps, and residual concerns to design and integration stakeholders.
 
-## Base Practice Checklist
-- Derive unit verification cases and procedures from requirements and design.
-- Define expected outcomes and acceptance criteria.
-- Execute unit verification in a controlled environment.
-- Compare results, log anomalies, and assess completion status.
-- Maintain traceability and regression evidence.
+## Base Practice Checklist (PA 1.1 Completeness)
+- **Specification completeness:** All unit requirements are tested; all boundary and error cases are covered in the test plan.
+- **Traceability completeness:** Every test case is linked to one or more requirements; every requirement linked to a test is verified in code by reading the test.
+- **Execution completeness:** All test cases in the specification are executed; all results are recorded with actual vs. expected comparison.
+- **Coverage completeness:** If coverage targets are defined, measurement is executed and results recorded. Coverage gaps (e.g., unreachable code) are explicitly documented.
+- **Artifact completeness:** Test report includes spec, execution records, requirement traceability, design trace, coverage result (if applicable), defect log, and sign-off.
+- **Regression evidence:** A regression test set is maintained and re-executed after any code changes; results are recorded.
 
 ## Expected Outputs
 - Unit verification specification
@@ -62,8 +63,11 @@ Use this skill to verify software units against detailed design and allocated re
 - Coverage rationale where applicable
 - Re-test evidence after fixes
 
-## Done Criteria
-- Unit verification demonstrates whether the implemented unit satisfies its detailed design and allocated requirements.
-- All requirement links in the test report are verified correct by inspecting the test code.
-- If coverage measurement is specified, actual coverage percentage (statement % / branch %) is measured and recorded in the report.
-- Traceability table in the report correctly lists all verified requirements; no verified requirement is omitted.
+## Done Criteria (PA 1.1 Fully Achieved)
+- Unit verification specification is complete: all unit requirements, test cases, expected results, environment setup, and coverage targets are defined.
+- Every test case is executed; results are recorded with actual vs. expected comparison; all 14 UT-001–UT-014 (or equivalent) are listed individually with pass/fail status.
+- All requirement links in the test report are verified correct by inspecting the test code. No mismatched or incorrect links remain.
+- If coverage measurement is specified, measurement run is executed and actual coverage percentage (statement % / branch %) is recorded in the report. Gaps between targets and actuals are noted.
+- Traceability table in the report comprehensively lists all covered requirements and test IDs; no verified requirement is omitted or marked as "not verified" if a test exercises it.
+- Test report includes execution date, baseline revision hash, environment configuration, and sign-off by role.
+- Unit verification evidence is complete, traceable, and sufficient to support integration and qualification testing decisions.
