@@ -1,10 +1,10 @@
 # Problem Resolution Log
 
-| ID | Issue | Impact | Resolution |
-|---|---|---|---|
-| PR-001 | Final vehicle CAN IDs are not yet confirmed | Integration contract may change | Keep message IDs provisional and isolate them in `can_protocol.hpp` |
-| PR-002 | Threshold values may need calibration against physical sensor behavior | Qualification results may shift | Keep thresholds configurable in `ControllerConfig` |
-| PR-003 | Role outputs initially drifted into unrelated workspace products | Artifact quality risk during document generation | Updated role skills to enforce strict product-scope behavior |
-| PR-004 | Negative-path evidence for malformed and missing CAN frames was not initially executed | Verification coverage gap | Added simulated malformed-frame, delayed-response, and missing-response scenarios to `day_night_simulation` and updated test reports |
-| PR-005 | Missing luminance responses were only documented as a limitation, not implemented as product behavior | Incomplete robustness requirement fulfillment | Added configurable timeout fault state and recovery behavior in code, tests, simulation scenarios, and project documentation |
-| PR-006 | FAULT state had no dedicated diagnosable fault-code CAN message | External diagnostics could not consume explicit fault events | Added CAN ID `0x540` diagnostic message with timeout fault code and active/clear status, plus test and documentation updates |
+| ID | Issue | Detected | Status | Resolved | Impact | Resolution |
+|---|---|---|---|---|---|---|
+| PR-001 | Final vehicle CAN IDs are not yet confirmed | 2026-03-09 | Open (Monitoring) | — | Integration contract may change | Keep message IDs provisional in `can_protocol.hpp`; confirm with network owner during vehicle integration (linked to R-001, CR-008) |
+| PR-002 | Threshold values may need calibration against physical sensor behavior | 2026-03-14 | Open (Monitoring) | — | Qualification results may shift | Keep thresholds configurable in `ControllerConfig`; defer final values to field calibration (linked to R-002) |
+| PR-003 | Role outputs initially drifted into unrelated workspace products | 2026-03-11 | Closed | 2026-03-12 | Artifact quality risk during document generation | Updated role skills to enforce strict product-scope behavior; subsequent role runs validated |
+| PR-004 | Negative-path evidence for malformed and missing CAN frames was not initially executed | 2026-03-17 | Closed | 2026-03-19 | Verification coverage gap | Added simulated malformed-frame, delayed-response, and missing-response scenarios to `day_night_simulation` and updated test reports |
+| PR-005 | Missing luminance responses were only documented as a limitation, not implemented as product behavior | 2026-03-18 | Closed | 2026-03-20 | Incomplete robustness requirement fulfillment | Added configurable timeout fault state and recovery behavior in code, tests, simulation scenarios, and project documentation |
+| PR-006 | FAULT state had no dedicated diagnosable fault-code CAN message | 2026-03-18 | Closed | 2026-03-20 | External diagnostics could not consume explicit fault events | Added CAN ID `0x540` diagnostic message with timeout fault code and active/clear status, plus test and documentation updates |

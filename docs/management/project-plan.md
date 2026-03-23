@@ -32,29 +32,67 @@ Deliver a software component that polls luminance over CAN every 5 seconds, dete
 - Traceability matrix and support process artifacts
 
 ## Milestones
-- M1: Requirements baseline approved
-- M2: Architecture baseline approved
-- M3: Code and detailed design complete
-- M4: Integrated baseline available
-- M5: Verification evidence complete
 
-## Entry and Exit Criteria
-### M1
+### M1: Requirements Baseline Approved
+- **Target Date:** 2026-03-09
+- **Actual Date:** 2026-03-09
+- **Effort Estimate:** 8h (Requirements Engineer)
 - Entry: Scope agreed and assumptions recorded
 - Exit: Requirements are uniquely identified, testable, and traced
 
-### M2
+### M2: Architecture Baseline Approved
+- **Target Date:** 2026-03-14
+- **Actual Date:** 2026-03-14
+- **Effort Estimate:** 6h (Software Architect)
 - Entry: Requirements baseline approved
 - Exit: Architecture defines software elements, interfaces, message contracts, and allocations
 
-### M3
+### M3: Code and Detailed Design Complete
+- **Target Date:** 2026-03-18
+- **Actual Date:** 2026-03-18
+- **Effort Estimate:** 12h (Software Designer/Engineer)
 - Entry: Architecture approved
 - Exit: Source code, detailed design, and unit tests are aligned and reviewable
 
-### M4
+### M4: Integrated Baseline Available
+- **Target Date:** 2026-03-20
+- **Actual Date:** 2026-03-20
+- **Effort Estimate:** 4h (Software Integrator)
 - Entry: Units verified and configuration items identified
 - Exit: Integrated baseline builds reproducibly and passes smoke checks
 
-### M5
+### M5: Verification Evidence Complete
+- **Target Date:** 2026-03-23
+- **Actual Date:** 2026-03-23
+- **Effort Estimate:** 10h (Test roles + Qualification Tester)
 - Entry: Integrated baseline frozen for test
 - Exit: Unit, integration, and qualification evidence recorded with residual risk assessment
+
+### M6: Corrective Action Phase (Final)
+- **Target Date:** 2026-03-25
+- **Planned Duration:** 2 working days
+- **Effort Estimate:** 18h (P0+P1 CRs across all roles)
+- **Entry:** M5 baseline frozen; assessment findings and CR log approved
+- **Exit:** P0 and P1 corrective actions closed; audit-ready evidence package
+
+## Effort Distribution by Role (All Phases)
+
+| Role | M1 | M2 | M3 | M4 | M5 | M6-CA | Total |
+|---|---|---|---|---|---|---|---|
+| Project Manager | 2h | 1h | 1h | 1h | 2h | 6h | 13h |
+| Requirements Engineer | 6h | 1h | 0h | 0h | 1h | 2h | 10h |
+| Software Architect | 1h | 4h | 1h | 0h | 1h | 1h | 8h |
+| Software Designer/Engineer | 0h | 0h | 8h | 1h | 1h | 3h | 13h |
+| Software Integrator | 0h | 0h | 2h | 4h | 0h | 2h | 8h |
+| Software Tester | 0h | 0h | 2h | 1h | 4h | 3h | 10h |
+| Software Integration Tester | 0h | 0h | 0h | 0h | 2h | 2h | 4h |
+| Software Qualification Tester | 0h | 0h | 0h | 0h | 3h | 2h | 5h |
+| **Subtotal** | **9h** | **6h** | **14h** | **7h** | **14h** | **21h** | **71h** |
+
+---
+
+## Assumptions and External Dependencies
+- Vehicle CAN network allocates provisional message IDs (R-001, R-007 risks: pending confirmation)
+- Luminance sensor response timing compatible with 5-second poll interval (R-003 risk: pending vehicle integration)
+- Final timeout value configurable during vehicle bring-up (R-006 risk: pending vehicle integration)
+- Assessment findings and corrective action plan approved by stakeholders (2026-03-23)
