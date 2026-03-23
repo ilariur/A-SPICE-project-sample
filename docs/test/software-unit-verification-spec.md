@@ -25,6 +25,16 @@
 | UT-013 | Timeout transition to `FAULT` emits diagnostic fault message | One frame `0x540` with timeout fault code and active flag |
 | UT-014 | Recovery from `FAULT` emits diagnostic clear message | One frame `0x540` with timeout fault code and cleared flag |
 
+## Coverage Objectives
+- **Statement coverage target:** ≥ 80% (for 14-unit SLOC ~500 lines → target ≥ 400 statements executed)
+- **Branch coverage target:** ≥ 70% (state machine transitions, timeout conditions, subscription registry limits)
+- **MC/DC (Modified Condition/Decision Coverage):** Not required for this component (non-safety-critical)
+
+## Coverage Measurement
+- Tool: `clang++ -fprofile-instr-generate -fcoverage-mapping` with `llvm-cov` for report
+- Baseline: Run `./build/day_night_tests` with coverage instrumentation
+- Reporting: Coverage summary in unit test report (SWE.4 evidence)
+
 ## Environment
 - Self-contained C++ executable
 - Recording sink for transmitted CAN frames
