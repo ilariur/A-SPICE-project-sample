@@ -1,5 +1,16 @@
 # Software Requirements
 
+## Derived Requirements
+These requirements emerged from architectural and technical decisions to satisfy parent stakeholder/system requirements.
+
+| ID | Source | Rationale | Allocated To |
+|---|---|---|---|
+| SWE-006 | SYS-007 (bounded registry) | Memory determinism for embedded environment | Controller bounded to 8 subscribers |
+| SWE-009 | SYS-009 (fault handling) | Network latency tolerance; configurable per vehicle | Controller supports responseTimeoutMs tuning |
+| SWE-004 | SYS-002 (day/night distinction) | Chatter prevention in transition zones | Configurable threshold hysteresis |
+
+## Software Requirements
+
 | ID | Requirement | Allocation |
 |---|---|---|
 | SWE-001 | `DayNightController` shall schedule poll requests at a fixed 5000 ms interval. | `src/day_night_controller.cpp` |
