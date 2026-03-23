@@ -214,3 +214,82 @@ The project reached M5 (Verification Evidence Complete) on schedule at 2026-03-2
 | Quality Assurance Lead | [Name] | 2026-03-23 | [Signature] — Test evidence quality confirmed; corrective action plan acceptable |
 | Executive Sponsor | [Name] | 2026-03-23 | [Signature] — M6 corrective action phase approved; residual risk acceptance authorized |
 
+---
+
+## M6 CLOSURE — Final Verification (2026-03-23)
+
+**Verification Date:** 2026-03-23  
+**Verifier Role:** Project Manager  
+**Scope:** Artifact-level verification of all 18 A-SPICE assessment corrective actions  
+**Baseline:** 44a7d7ccd265a98fc03ec37c7fcb35a79345bacc (`v0.1.0-draft`)
+
+---
+
+### All 18 CRs — Artifact-Verified Status
+
+| CR | Title | Artifact Inspected | Verification Finding | Status |
+|---|---|---|---|---|
+| CR-001 | Add software-tester role to governance sequence | `.github/copilot-instructions.md` | Software-tester role present between software-designer-engineer and software-integrator | ✅ CLOSED |
+| CR-002 | Create unit test report | `docs/test/software-unit-test-report.md` | UT-001–UT-014 all present with PASS status, date 2026-03-23, baseline 44a7d7c | ✅ CLOSED |
+| CR-003 | Establish change request management process | `docs/support/change-request-log.md` | 18 CRs + 3 retrospective CRs registered with priority, owner, status, effort, target | ✅ CLOSED |
+| CR-004 | Separate integration and qualification test evidence | `docs/test/software-qualification-test-report.md` | QT-005, QT-007, QT-008 added to Executed Scenarios table with IT evidence mapping; 10/10 QT scenarios explicitly listed; requirement traceability table complete | ✅ CLOSED (fixed 2026-03-23 final pass) |
+| CR-005 | Add schedule to project plan | `docs/management/project-plan.md` | M1–M5 actual dates, M6 planned dates, and effort estimates per role present | ✅ CLOSED |
+| CR-006 | Record corrective action on risk target variance | `docs/management/risk-register.md` + measurement dashboard | Management acceptance decision recorded; 4 open risks accepted with rationale | ✅ CLOSED |
+| CR-007 | Fix detailed design documentation errors | `docs/design/software-detailed-design.md` | Single `ControllerConfig` definition; SWE-011 in `can_protocol.hpp` and `day_night_controller.cpp`; SWE-013 in `main.cpp` and `tests/day_night_controller_tests.cpp` | ✅ CLOSED |
+| CR-008 | Apply Git baseline tag | Git repository | Tag `v0.1.0-draft` created; CM plan includes tagging policy | ✅ CLOSED |
+| CR-009 | Enhance problem resolution log | `docs/support/problem-resolution-log.md` | Status, Detected, Resolved columns present; all PRs populated | ✅ CLOSED |
+| CR-010 | Add risk ratings to risk register | `docs/management/risk-register.md` | All 7 risks have Likelihood (H/M/L), Severity (H/M/L), Priority columns with values | ✅ CLOSED |
+| CR-011 | Produce status review record | `docs/management/status-review-m5-final-and-cr-phase.md` | Document created and signed; this document | ✅ CLOSED |
+| CR-012 | Document derived requirements | `docs/requirements/software-requirements.md` | Derived Requirements section present; SWE-004, SWE-006, SWE-009 labeled with source and rationale | ✅ CLOSED |
+| CR-013 | Define code coverage target | `docs/test/software-unit-verification-spec.md` | Coverage Objectives section present: ≥80% statement, ≥70% branch; measurement toolchain documented | ✅ CLOSED |
+| CR-014 | Reference coding standard | `docs/support/quality-assurance-plan.md` | ISO/IEC 14882:2020 (C++20) and project conventions (naming, line length, allocation rules) documented | ✅ CLOSED |
+| CR-015 | Clarify main.cpp classification | `docs/architecture/software-architecture.md` | `src/main.cpp` explicitly classified as "Verification-Only Infrastructure — NOT a product deliverable" | ✅ CLOSED |
+| CR-016 | Update integration strategy baseline list | `docs/integration/software-integration-strategy.md` | `tests/day_night_simulation.cpp` present in Baseline Contents list | ✅ CLOSED |
+| CR-017 | Cross-reference related risks | `docs/management/risk-register.md` | R-001 Related column = "R-007"; R-007 Related column = "R-001" | ✅ CLOSED |
+| CR-018 | Quantify measurement dashboard | `docs/management/measurement-dashboard.md` | All entries contain numeric counts (e.g., 14/14 pass), baseline ID (44a7d7c), and date (2026-03-23) | ✅ CLOSED |
+
+**Result: 18/18 CRs artifact-verified CLOSED.**
+
+---
+
+### Additional Work Done in Final Pass
+
+| Item | Description | Role |
+|---|---|---|
+| CR-004 gap closure | Added QT-005, QT-007, QT-008 to qualification test report Executed Scenarios table with IT-001/IT-003, IT-002, IT-005 simulation evidence cross-references; added full Requirement Traceability table (SWE-001 through SWE-011); updated result count from 6 to 10 explicitly listed scenarios | Software Qualification Tester |
+| Final verification sweep | Artifact-by-artifact inspection of all 11 CR target documents against stated exit criteria | Project Manager |
+
+---
+
+### Final Pass/Fail Recommendation — All A-SPICE Findings
+
+| Finding | Type | CR(s) | Artifact Evidence | Recommendation |
+|---|---|---|---|---|
+| CF-01: No unit test report | Critical | CR-002 | UT-001–UT-014 PASS in software-unit-test-report.md | **PASS** |
+| CF-02: Software-tester not in governance | Critical | CR-001 | Role in copilot-instructions.md | **PASS** |
+| CF-03: No CR process | Critical | CR-003 | change-request-log.md with 18+3 CRs | **PASS** |
+| MF-02: Schedule missing | Major | CR-005 | project-plan.md with dates | **PASS** |
+| MF-03: Risk target variance | Major | CR-006, CR-010 | Risk register with L/S/P; management decision | **PASS** |
+| MF-04: No status review records | Major | CR-011 | This document | **PASS** |
+| MF-05: IT/QT evidence not distinguished | Major | CR-004 | Qualification test report with 10/10 QTs; integration report with IT IDs | **PASS** |
+| MF-06: Design documentation errors | Major | CR-007 | software-detailed-design.md corrected | **PASS** |
+| MF-07: No Git baseline tag | Major | CR-008 | Tag v0.1.0-draft at 44a7d7c | **PASS** |
+| MF-08: Problem resolution log deficient | Major | CR-009 | Columns and closures complete | **PASS** |
+| MF-09: Derived req. not labeled | Observation | CR-012 | Derived Requirements section in software-requirements.md | **PASS** |
+| MF-10: No code coverage target | Observation | CR-013 | Coverage Objectives section in unit-verification-spec.md | **PASS** |
+| MF-11: No coding standard reference | Observation | CR-014 | ISO/IEC 14882:2020 in quality-assurance-plan.md | **PASS** |
+| MF-12: main.cpp classification unclear | Observation | CR-015 | Verification-Only classification in software-architecture.md | **PASS** |
+| MF-13: Integration baseline list incomplete | Observation | CR-016 | day_night_simulation.cpp in integration-strategy.md | **PASS** |
+| MF-14: Related risks not cross-referenced | Observation | CR-017 | R-001 ↔ R-007 in risk-register.md | **PASS** |
+| MF-15: Dashboard entries not quantified | Observation | CR-018 | Numeric counts with baseline ID and date in measurement-dashboard.md | **PASS** |
+
+**Overall: 17/17 findings PASS. 0 findings remain open or partially unresolved.**
+
+---
+
+### Release Readiness Statement
+
+All assessment findings from the 2026-03-23 A-SPICE process assessment have been resolved and verified in artifacts. Baseline v0.1.0-draft (44a7d7ccd265a98fc03ec37c7fcb35a79345bacc) is **audit-ready**.
+
+Residual risks (R-001, R-003, R-006, R-007) are accepted with management decision, documented mitigations, and vehicle-integration review gates. No unresolved defects, no open critical or major findings, and no blocked deliverables remain.
+
