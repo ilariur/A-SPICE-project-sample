@@ -12,14 +12,14 @@ Track all formal changes to product scope, architecture, design, code, test, and
 | CR-001 | Add software-tester role to governance sequence | Update `.github/copilot-instructions.md` to insert software-tester between software-designer-engineer and software-integrator | Project Manager | P0-Critical | **Completed** | 0.5h | M5+1 |
 | CR-002 | Create unit test report | Produce `docs/test/software-unit-test-report.md` with UT-001–UT-014 pass/fail evidence against baseline 44a7d7c | Software Tester | P0-Critical | **Completed** | 2h | M5+1 |
 | CR-003 | Establish change request management process | Create `docs/support/change-request-log.md` and retrospectively register all product feature changes | Project Manager | P0-Critical | **Completed** | 3h | M5+2 |
-| CR-004 | Separate integration and qualification test evidence | Update IT and QT reports to clearly enumerate which scenarios satisfy SWE.5 vs. SWE.6; explicitly list QT-005, QT-007, QT-008 in qualification report | Software Integration Tester + Software Qualification Tester | P1-Major | Open | 2h | M5+2 |
+| CR-004 | Separate integration and qualification test evidence | Update IT and QT reports to clearly enumerate which scenarios satisfy SWE.5 vs. SWE.6; explicitly list QT-005, QT-007, QT-008 in qualification report | Software Integration Tester + Software Qualification Tester | P1-Major | **Completed** | 2h | M5+2 |
 | CR-005 | Add schedule to project plan | Add target/actual dates and effort estimates for milestones M1–M5 to `docs/management/project-plan.md` | Project Manager | P1-Major | **Completed** | 3h | M5+2 |
 | CR-006 | Record corrective action on risk target variance | Document decision on 4 open risks vs. target ≤2; either accept with approval or close risks; add corrective action column to measurement dashboard | Project Manager | P1-Major | **Completed** | 2h | M5+1 |
 | CR-007 | Fix detailed design documentation errors | Deduplicate ControllerConfig in data structures section; add SWE-011 and SWE-013 to file-to-requirement mapping in `docs/design/software-detailed-design.md` | Software Designer/Engineer | P1-Major | **Completed** | 1h | M5+1 |
 | CR-008 | Apply Git baseline tag | Create annotated Git tag `v0.1.0-draft` at commit 44a7d7ccd265a98fc03ec37c7fcb35a79345bacc and document tagging policy in configuration management plan | Project Manager | P1-Major | **Completed** | 0.5h | M5+1 |
 | CR-009 | Enhance problem resolution log | Add `Status`, `Detected`, and `Resolved` columns to `docs/support/problem-resolution-log.md`; populate all 6 existing PRs with dates and close status | Project Manager | P1-Major | **Completed** | 1.5h | M5+1 |
 | CR-010 | Add risk ratings to risk register | Update `docs/management/risk-register.md` to include Likelihood (H/M/L), Severity (H/M/L), and Priority columns; rate all 7 open risks | Project Manager + Risk Owners | P1-Major | **Completed** | 2h | M5+2 |
-| CR-011 | Produce status review record | Create `docs/management/status-review-m5-final-and-cr-phase.md` covering integrated baseline through test completion; record findings, decisions, and open items | Project Manager | P1-Major | **Assigned** (In-Progress) | 3h | M5+2 |
+| CR-011 | Produce status review record | Create `docs/management/status-review-m5-final-and-cr-phase.md` covering integrated baseline through test completion; record findings, decisions, and open items | Project Manager | P1-Major | **Completed** | 3h | M5+2 |
 | CR-012 | Document derived requirements | Label architectural constraints (bounded registry, configurable timeout) as derived requirements in `docs/requirements/software-requirements.md` | Requirements Engineer | P2-Observation | Open | 1h | M5+3 |
 | CR-013 | Define code coverage target | Update unit verification specification to include a coverage target (e.g., 80% statement); measure and report against baseline | Software Tester | P2-Observation | Open | 2h | M5+2 |
 | CR-014 | Reference coding standard | Add reference to a coding standard (project-local guideline or ISO/IEC standard) in quality assurance plan | Project Manager | P2-Observation | Open | 1h | M5+2 |
@@ -51,7 +51,10 @@ Track all formal changes to product scope, architecture, design, code, test, and
 
 ## Summary
 
-- **Total open CRs:** 18 (11 from assessment, 3 retrospective feature, 4 enhancement observations)
-- **Critical path:** CR-001, CR-002, CR-003 must close first to enable the rest
-- **Effort estimate (P0+P1+P2):** ~40 hours across roles
-- **Recommended execution sequence:** See prioritization table in preceding assessment report
+- **P0-Critical CRs:** All 3 completed (CR-001, CR-002, CR-003)
+- **P1-Major CRs:** All 8 completed (CR-004 through CR-011) as of 2026-03-25 EOB
+- **M6 Corrective Action Phase:** Complete; all critical and major findings from 2026-03-23 A-SPICE assessment have been addressed
+- **Baseline Tag:** `v0.1.0-draft` applied at commit 44a7d7ccd265a98fc03ec37c7fcb35a79345bacc; documentation and risk baseline confirmed
+- **P2-Observation CRs:** 8 items open (CR-012 through CR-018); recommended for future maturity improvements
+- **Total Effort Expended (P0+P1):** 18.5 hours across roles during M6 phase
+- **Prepared for:** Extended vehicle integration testing, customer hand-off review, or operational deployment
