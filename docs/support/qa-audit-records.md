@@ -1,15 +1,13 @@
-# QA Audit Records
-
-**Document Version:** 1.0  
-**Date:** 2026-03-26  
-**Author:** Quality Assurance Lead  
-**Status:** Approved
-
+---
+Revision: 1.1
+Date: 2026-03-27
+Author: Quality Assurance
+Status: Approved
 ---
 
-## Purpose
+# QA Audit Records
 
-Record execution of planned quality assurance activities per the Quality Assurance Plan. Each audit documents scope, items checked, findings, and disposition to provide decision-level evidence for SUP.1 (Quality Assurance) PA 1.1.
+**Purpose:** Record execution of planned quality assurance activities per the Quality Assurance Plan. Each audit documents scope, items checked, findings, and disposition to provide decision-level evidence for SUP.1 (Quality Assurance) PA 1.1.
 
 ---
 
