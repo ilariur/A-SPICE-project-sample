@@ -43,6 +43,7 @@ private:
     void sendStateResponse(std::uint8_t clientId, TimestampMs nowMs);
     void sendSubscriptionAck(std::uint8_t clientId, SubscriptionStatus status);
     void sendNotification(std::uint8_t clientId, DayNightState previous, DayNightState next, TimestampMs nowMs);
+    void sendDiagnosticFault(FaultCode code, bool active, DayNightState previous, DayNightState next, TimestampMs nowMs);
     [[nodiscard]] bool isRegistered(std::uint8_t clientId) const noexcept;
 
     CanFrameSink& sink_;

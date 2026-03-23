@@ -12,3 +12,4 @@
 | SYS-008 | The system shall return explicit registration status codes for duplicate, full, and not-found cases. | Unit test |
 | SYS-009 | The system shall enter `FAULT` state if a luminance response is not received within 6000 ms of the oldest outstanding poll request. | Unit test, integration test, qualification test |
 | SYS-010 | The system shall recover from `FAULT` to `DAY` or `NIGHT` on the next valid luminance response according to threshold rules. | Unit test, integration test, qualification test |
+| SYS-011 | The system shall emit a dedicated diagnostic CAN message with fault code when entering `FAULT` due to luminance response timeout and a clear message when recovering from that fault. | Unit test, integration test, qualification test |

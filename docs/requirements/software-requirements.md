@@ -12,5 +12,6 @@
 | SWE-008 | `DayNightController` shall emit one notification frame per registered client when the state changes. | `src/day_night_controller.cpp` |
 | SWE-009 | `DayNightController` shall detect missing luminance responses using configurable timeout `responseTimeoutMs` and transition to `FAULT` when the timeout expires. | `src/day_night_controller.cpp` |
 | SWE-010 | `DayNightController` shall recover from `FAULT` to `DAY` or `NIGHT` when a valid luminance response is later received. | `src/day_night_controller.cpp` |
-| SWE-011 | The implementation shall avoid exceptions and dynamic allocation on the control path. | `src/*.hpp`, `src/*.cpp` |
-| SWE-012 | The product shall be verifiable with a self-contained test executable that does not require external test frameworks. | `tests/day_night_controller_tests.cpp` |
+| SWE-011 | `DayNightController` shall emit CAN ID `0x540` with diagnostic payload `{faultCode, activeFlag, previousState, currentState, timestamp}` on fault enter and fault clear events. | `src/day_night_controller.cpp` |
+| SWE-012 | The implementation shall avoid exceptions and dynamic allocation on the control path. | `src/*.hpp`, `src/*.cpp` |
+| SWE-013 | The product shall be verifiable with a self-contained test executable that does not require external test frameworks. | `tests/day_night_controller_tests.cpp` |

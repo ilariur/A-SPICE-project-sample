@@ -22,6 +22,8 @@
 | UT-010 | Unregistered client does not receive later notifications | No `0x530` frame for removed client |
 | UT-011 | Missing luminance response beyond timeout moves state to `FAULT` | Query returns `FAULT` and notification is sent to subscribers |
 | UT-012 | Valid luminance response after `FAULT` recovers to `DAY` or `NIGHT` | Notification reports recovery state |
+| UT-013 | Timeout transition to `FAULT` emits diagnostic fault message | One frame `0x540` with timeout fault code and active flag |
+| UT-014 | Recovery from `FAULT` emits diagnostic clear message | One frame `0x540` with timeout fault code and cleared flag |
 
 ## Environment
 - Self-contained C++ executable

@@ -33,6 +33,11 @@ enum class SubscriptionStatus : std::uint8_t {
     Invalid = 0x04,
 };
 
+enum class FaultCode : std::uint8_t {
+    None = 0x00,
+    LuminanceResponseTimeout = 0x01,
+};
+
 struct CanIds {
     static constexpr std::uint16_t kLuminancePollRequest = 0x500;
     static constexpr std::uint16_t kLuminanceResponse = 0x501;
@@ -41,6 +46,7 @@ struct CanIds {
     static constexpr std::uint16_t kSubscriptionControl = 0x520;
     static constexpr std::uint16_t kSubscriptionStatus = 0x521;
     static constexpr std::uint16_t kStateChangeNotification = 0x530;
+    static constexpr std::uint16_t kDiagnosticFault = 0x540;
 };
 
 inline std::uint16_t readU16(const std::array<std::uint8_t, 8>& data, std::size_t offset) {

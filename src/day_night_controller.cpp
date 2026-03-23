@@ -93,6 +93,9 @@ void DayNightController::handleLuminance(std::uint16_t lux, TimestampMs nowMs) {
                 sendNotification(subscribers_[index], previous, currentState_, nowMs);
             }
         }
+        if (previous == DayNightState::Fault) {
+            sendDiagnosticFault(FaultCode::LuminanceResponseTimeout, false, previous, currentState_, nowMs);
+        }
     }
 }
 
@@ -107,6 +110,8 @@ void DayNightController::handleResponseTimeout(TimestampMs nowMs) {
     const DayNightState previous = currentState_;
     currentState_ = DayNightState::Fault;
     lastTransitionMs_ = nowMs;
+
+    sendDiagnosticFault(FaultCode::LuminanceResponseTimeout, true, previous, currentState_, nowMs);
 
     for (std::size_t index = 0; index < subscriberCount_; ++index) {
         sendNotification(subscribers_[index], previous, currentState_, nowMs);
@@ -189,6 +194,22 @@ void DayNightController::sendNotification(std::uint8_t clientId,
     frame.data[1] = static_cast<std::uint8_t>(next);
     frame.data[2] = static_cast<std::uint8_t>(previous);
     writeU32(frame.data, 3, static_cast<std::uint32_t>(nowMs));
+    sink_.send(frame);
+}
+
+void DayNightController::sendDiagnosticFault(FaultCode code,
+                                             bool active,
+                                             DayNightState previous,
+                                             DayNightState next,
+                                             TimestampMs nowMs) {
+    CanFrame frame{};
+    frame.id = CanIds::kDiagnosticFault;
+    frame.dlc = 8;
+    frame.data[0] = static_cast<std::uint8_t>(code);
+    frame.data[1] = static_cast<std::uint8_t>(active ? 1U : 0U);
+    frame.data[2] = static_cast<std::uint8_t>(previous);
+    frame.data[3] = static_cast<std::uint8_t>(next);
+    writeU32(frame.data, 4, static_cast<std::uint32_t>(nowMs));
     sink_.send(frame);
 }
 

@@ -10,5 +10,6 @@
 | Qualification scenario pass rate | 100% of executed scenarios | `build/day_night_simulation` and qualification report | Achieved in local run |
 | Negative-path CAN scenario pass rate | 100% of executed malformed or missing-response scenarios | `build/day_night_simulation` | Achieved in local run |
 | Timeout fault scenario pass rate | 100% of executed timeout and recovery scenarios | `build/day_night_tests`, `build/day_night_simulation` | Achieved in local run |
+| Diagnostic fault message scenario pass rate | 100% of executed diagnostic active/clear scenarios | `build/day_night_tests`, `build/day_night_simulation` | Achieved in local run |
 | Open high-severity defects | 0 | Problem resolution log | 0 |
 | Residual medium-or-higher risks | <= 2 | Risk register | 3 open |

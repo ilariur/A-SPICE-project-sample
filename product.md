@@ -9,6 +9,7 @@
 ## Key Decisions
 - The product sends a luminance poll request every 5000 ms and expects a luminance response frame.
 - The product enters `FAULT` if luminance responses are missing longer than the configured timeout, defaulting to 6000 ms.
+- The product emits CAN ID `0x540` with timeout fault code on fault enter and a clear message on fault recovery.
 - State logic uses hysteresis to avoid chatter: switch to `DAY` above 1500 lux, switch to `NIGHT` below 800 lux.
 - A valid luminance response after `FAULT` recovers the product to `DAY` or `NIGHT` using the same threshold rules.
 - Query responses are point-to-point by client identifier carried in the payload.
@@ -27,6 +28,7 @@
 - The project was built successfully with `ninja -f build.ninja`, and the self-contained unit verification executable passed.
 - The simulated CAN scenario runner passed 11 of 11 combined integration and qualification scenarios, including malformed-frame, delayed-response, and missing-response cases.
 - Timeout fault behavior is now implemented end to end: query and notification paths expose `FAULT`, and recovery on valid luminance response is verified.
+- Dedicated diagnosable fault reporting is implemented alongside `FAULT` state transitions and verified in unit and simulation scenarios.
 
 ## Artifact Index
 - `docs/management/project-plan.md`

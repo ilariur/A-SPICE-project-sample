@@ -133,11 +133,16 @@ void test_timeout_fault_and_recovery() {
     sink.clear();
     controller.tick(11000);
     assert(controller.state() == DayNightState::Fault);
-    assert(sink.frames.size() == 2);
-    assert(sink.frames[0].id == CanIds::kStateChangeNotification);
-    assert(sink.frames[0].data[1] == static_cast<std::uint8_t>(DayNightState::Fault));
+    assert(sink.frames.size() == 3);
+    assert(sink.frames[0].id == CanIds::kDiagnosticFault);
+    assert(sink.frames[0].data[0] == static_cast<std::uint8_t>(FaultCode::LuminanceResponseTimeout));
+    assert(sink.frames[0].data[1] == 1U);
     assert(sink.frames[0].data[2] == static_cast<std::uint8_t>(DayNightState::Day));
-    assert(sink.frames[1].id == CanIds::kLuminancePollRequest);
+    assert(sink.frames[0].data[3] == static_cast<std::uint8_t>(DayNightState::Fault));
+    assert(sink.frames[1].id == CanIds::kStateChangeNotification);
+    assert(sink.frames[1].data[1] == static_cast<std::uint8_t>(DayNightState::Fault));
+    assert(sink.frames[1].data[2] == static_cast<std::uint8_t>(DayNightState::Day));
+    assert(sink.frames[2].id == CanIds::kLuminancePollRequest);
 
     sink.clear();
     controller.onFrame(makeQuery(0x61), 11100);
@@ -148,10 +153,15 @@ void test_timeout_fault_and_recovery() {
     sink.clear();
     controller.onFrame(makeLuminance(500), 11200);
     assert(controller.state() == DayNightState::Night);
-    assert(sink.frames.size() == 1);
+    assert(sink.frames.size() == 2);
     assert(sink.frames[0].id == CanIds::kStateChangeNotification);
     assert(sink.frames[0].data[1] == static_cast<std::uint8_t>(DayNightState::Night));
     assert(sink.frames[0].data[2] == static_cast<std::uint8_t>(DayNightState::Fault));
+    assert(sink.frames[1].id == CanIds::kDiagnosticFault);
+    assert(sink.frames[1].data[0] == static_cast<std::uint8_t>(FaultCode::LuminanceResponseTimeout));
+    assert(sink.frames[1].data[1] == 0U);
+    assert(sink.frames[1].data[2] == static_cast<std::uint8_t>(DayNightState::Fault));
+    assert(sink.frames[1].data[3] == static_cast<std::uint8_t>(DayNightState::Night));
 }
 
 }  // namespace aspice

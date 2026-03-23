@@ -5,6 +5,7 @@
 - Query request and response interface
 - Subscription control and status interface
 - State-change notification interface
+- Diagnostic fault reporting interface
 
 ## Integration Sequences
 
@@ -16,7 +17,8 @@
 | IT-004 | Query after transition | Response returns new state |
 | IT-005 | Subscribe, unsubscribe, then transition | Removed client receives no notification |
 | IT-006 | Malformed query, malformed subscription, and unknown CAN frame | Frames are ignored without state corruption or unintended response |
-| IT-007 | Delayed luminance response across multiple poll cycles | Polling continues, query returns `UNKNOWN` until first valid luminance response arrives |
+| IT-007 | Delayed luminance response across multiple poll cycles | Polling continues, query returns `FAULT` after timeout until valid luminance response arrives |
+| IT-008 | Timeout transition and recovery | CAN ID `0x540` fault message is emitted on timeout and clear message is emitted on recovery |
 
 ## Environment
 - Same executable baseline as unit verification

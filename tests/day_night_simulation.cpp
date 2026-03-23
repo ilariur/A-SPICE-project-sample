@@ -399,6 +399,54 @@ ScenarioResult scenario_missing_response_timeout_behavior() {
     return result;
 }
 
+    ScenarioResult scenario_diagnostic_fault_reporting() {
+        ScenarioResult result = makeScenarioResult("IT-008/QT-010 Diagnostic fault message on FAULT enter and clear");
+        SimulatedCanBus bus;
+
+        bus.injectLuminance(1700);
+        expect(result, bus.controller.state() == DayNightState::Day, "Expected initial DAY state before diagnostic scenario.");
+
+        bus.clearFrames();
+        bus.advanceTo(5000);
+        bus.clearFrames();
+        bus.advanceTo(11000);
+
+        const CanFrame* activeDiagnostic = bus.lastFrame(CanIds::kDiagnosticFault);
+        expect(result, activeDiagnostic != nullptr, "Expected diagnostic fault frame when timeout drives FAULT state.");
+        if (activeDiagnostic != nullptr) {
+         expect(result,
+             activeDiagnostic->data[0] == static_cast<std::uint8_t>(FaultCode::LuminanceResponseTimeout),
+             "Expected timeout fault code in active diagnostic frame.");
+         expect(result, activeDiagnostic->data[1] == 1U, "Expected active flag set in diagnostic fault frame.");
+         expect(result,
+             activeDiagnostic->data[2] == static_cast<std::uint8_t>(DayNightState::Day),
+             "Expected previous state DAY in active diagnostic frame.");
+         expect(result,
+             activeDiagnostic->data[3] == static_cast<std::uint8_t>(DayNightState::Fault),
+             "Expected current state FAULT in active diagnostic frame.");
+        }
+
+        bus.clearFrames();
+        bus.injectLuminance(2000);
+
+        const CanFrame* clearedDiagnostic = bus.lastFrame(CanIds::kDiagnosticFault);
+        expect(result, clearedDiagnostic != nullptr, "Expected diagnostic fault clear frame after recovery luminance.");
+        if (clearedDiagnostic != nullptr) {
+         expect(result,
+             clearedDiagnostic->data[0] == static_cast<std::uint8_t>(FaultCode::LuminanceResponseTimeout),
+             "Expected timeout fault code in clear diagnostic frame.");
+         expect(result, clearedDiagnostic->data[1] == 0U, "Expected cleared flag in diagnostic clear frame.");
+         expect(result,
+             clearedDiagnostic->data[2] == static_cast<std::uint8_t>(DayNightState::Fault),
+             "Expected previous state FAULT in diagnostic clear frame.");
+         expect(result,
+             clearedDiagnostic->data[3] == static_cast<std::uint8_t>(DayNightState::Day),
+             "Expected current state DAY in diagnostic clear frame.");
+        }
+
+        return result;
+    }
+
 }  // namespace aspice
 
 int main() {
@@ -416,6 +464,7 @@ int main() {
         scenario_dusk_transition_and_query(),
         scenario_dawn_transition(),
         scenario_missing_response_timeout_behavior(),
+        scenario_diagnostic_fault_reporting(),
     };
 
     std::size_t passed = 0;

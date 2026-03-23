@@ -18,13 +18,14 @@
 | QT-006 | Query after dusk transition | Response is `NIGHT` |
 | QT-007 | Two clients subscribe before transition | Both receive notification |
 | QT-008 | Client unsubscribes before transition | Unsubscribed client receives no notification |
-| QT-009 | Missing luminance response for multiple poll intervals after a valid sample | Polling continues and query returns the last known state |
+| QT-009 | Missing luminance response for multiple poll intervals after a valid sample | Polling continues, query returns `FAULT`, and diagnostic fault message is emitted |
+| QT-010 | Valid luminance response after timeout fault | Query returns recovered `DAY` or `NIGHT` state and diagnostic clear message is emitted |
 
 ## Residual Risks
 - Vehicle CAN IDs are still provisional.
 - Threshold values may require sensor-specific calibration.
 - Bus-level timing on the final target still requires vehicle integration confirmation.
-- No explicit fault state is emitted for missing luminance responses; current behavior retains the last known state or `UNKNOWN` before the first valid sample.
+- Fault code allocation and diagnostic receiver mapping for CAN ID `0x540` must be confirmed with the target vehicle diagnostic architecture.
 
 ## Release Recommendation Criteria
 - All functional scenarios pass.
