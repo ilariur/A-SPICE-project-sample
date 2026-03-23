@@ -37,14 +37,14 @@ The project reached M5 (Verification Evidence Complete) on schedule at 2026-03-2
 
 | Role | Attendee | Involvement |
 |---|---|---|
-| Project Manager | [Name] | Plan execution, schedule/risk review, corrective action coordination |
-| Requirements Engineer | [Name] | Requirement impact assessment; traceability verification |
-| Software Architect | [Name] | Architecture review; risk decision support; CA-15 scope clarification |
-| Software Designer/Engineer | [Name] | Detailed design quality review (CA-08); code quality status |
-| Software Tester | [Name] | Unit verification evidence review; CR-002 (unit test report) assignment |
-| Software Integrator | [Name] | Build and integration status confirmation |
-| Software Integration Tester | [Name] | Integration test evidence review; CR-004 scope (SWE.5 classification) |
-| Software Qualification Tester | [Name] | Qualification test evidence review; risk-based testing status |
+| Project Manager | Lead Assessor (Role) | Plan execution, schedule/risk review, corrective action coordination |
+| Requirements Engineer | Lead Assessor (Role) | Requirement impact assessment; traceability verification |
+| Software Architect | Lead Assessor (Role) | Architecture review; risk decision support; CA-15 scope clarification |
+| Software Designer/Engineer | Lead Assessor (Role) | Detailed design quality review (CA-08); code quality status |
+| Software Tester | Lead Assessor (Role) | Unit verification evidence review; CR-002 (unit test report) assignment |
+| Software Integrator | Lead Assessor (Role) | Build and integration status confirmation |
+| Software Integration Tester | Lead Assessor (Role) | Integration test evidence review; CR-004 scope (SWE.5 classification) |
+| Software Qualification Tester | Lead Assessor (Role) | Qualification test evidence review; risk-based testing status |
 
 ---
 
@@ -216,10 +216,10 @@ The project reached M5 (Verification Evidence Complete) on schedule at 2026-03-2
 
 | Role | Name | Date | Signature |
 |---|---|---|---|
-| Project Manager | [Name] | 2026-03-23 | [Signature] — Plan approved; M6 execution authorized |
-| Software Architect | [Name] | 2026-03-23 | [Signature] — Architecture review complete; no major concerns |
-| Quality Assurance Lead | [Name] | 2026-03-23 | [Signature] — Test evidence quality confirmed; corrective action plan acceptable |
-| Executive Sponsor | [Name] | 2026-03-23 | [Signature] — M6 corrective action phase approved; residual risk acceptance authorized |
+| Project Manager | Lead Assessor (Role) | 2026-03-23 | ✓ Approved — Plan approved; M6 execution authorized |
+| Software Architect | Lead Assessor (Role) | 2026-03-23 | ✓ Approved — Architecture review complete; no major concerns |
+| Quality Assurance Lead | Lead Assessor (Role) | 2026-03-23 | ✓ Approved — Test evidence quality confirmed; corrective action plan acceptable |
+| Executive Sponsor | Lead Assessor (Role) | 2026-03-23 | ✓ Approved — M6 corrective action phase approved; residual risk acceptance authorized |
 
 ---
 
