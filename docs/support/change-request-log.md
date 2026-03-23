@@ -10,7 +10,7 @@ Track all formal changes to product scope, architecture, design, code, test, and
 | CR# | Title | Scope | Owner | Priority | Status | Est. Effort | Target |
 |---|---|---|---|---|---|---|---|
 | CR-001 | Add software-tester role to governance sequence | Update `.github/copilot-instructions.md` to insert software-tester between software-designer-engineer and software-integrator | Project Manager | P0-Critical | **Assigned** (FIXED) | 0.5h | M5+1 |
-| CR-002 | Create unit test report | Produce `docs/test/software-unit-test-report.md` with UT-001–UT-014 pass/fail evidence against baseline 44a7d7c | Software Tester | P0-Critical | **Assigned** | 2h | M5+1 |
+| CR-002 | Create unit test report | Produce `docs/test/software-unit-test-report.md` with UT-001–UT-014 pass/fail evidence against baseline 44a7d7c | Software Tester | P0-Critical | **Completed** | 2h | M5+1 |
 | CR-003 | Establish change request management process | Create `docs/support/change-request-log.md` and retrospectively register all product feature changes | Project Manager | P0-Critical | **Assigned** (Established) | 3h | M5+2 |
 | CR-004 | Separate integration and qualification test evidence | Update IT and QT reports to clearly enumerate which scenarios satisfy SWE.5 vs. SWE.6; explicitly list QT-005, QT-007, QT-008 in qualification report | Software Integration Tester + Software Qualification Tester | P1-Major | Open | 2h | M5+2 |
 | CR-005 | Add schedule to project plan | Add target/actual dates and effort estimates for milestones M1–M5 to `docs/management/project-plan.md` | Project Manager | P1-Major | **Assigned** (Completed) | 3h | M5+2 |
