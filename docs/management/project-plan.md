@@ -35,7 +35,7 @@ Deliver a software component that polls luminance over CAN every 5 seconds, dete
 
 ### M1: Requirements Baseline Approved
 - **Target Date:** 2026-03-15
-- **Actual Date:** 2026-03-18
+- **Actual Date:** 2026-03-09
 - **Duration:** +3 days slip
 - **Effort Estimate:** 8h (Requirements Engineer)
 - Entry: Scope agreed and assumptions recorded
@@ -77,23 +77,25 @@ Deliver a software component that polls luminance over CAN every 5 seconds, dete
 - **Planned Duration:** 2026-03-24 to 2026-03-25 (2 working days)
 - **P0 Target:** Close all P0-Critical CRs by EOB 2026-03-24
 - **P1 Target:** Close all P1-Major CRs by EOB 2026-03-25
-- **Total Effort:** 21h across all roles
+- **Total Effort (Planned):** 18.5h across all roles
+- **Total Effort (Actual):** 26.5h across all roles
+- **Variance:** +8h (43% overage) — due to 7 additional P2-Observation CRs (CR-012–CR-018) executed in parallel with P0+P1 critical path (not initially planned for M6 timeline)
 - Entry: M5 baseline frozen; assessment findings and CR log approved
-- Exit: P0 and P1 corrective actions closed; audit-ready evidence package
+- Exit: P0, P1, and P2 corrective actions closed; audit-ready evidence package
 
 ## Effort Distribution by Role (All Phases)
 
-| Role | M1 | M2 | M3 | M4 | M5 | M6-CA | Total |
-|---|---|---|---|---|---|---|---|
-| Project Manager | 2h | 1h | 1h | 1h | 2h | 10.5h | 17.5h |
-| Requirements Engineer | 6h | 1h | 0h | 0h | 1h | 2h | 10h |
-| Software Architect | 1h | 4h | 1h | 0h | 1h | 1h | 8h |
-| Software Designer/Engineer | 0h | 0h | 8h | 1h | 1h | 1h | 11h |
-| Software Integrator | 0h | 0h | 2h | 4h | 0h | 0h | 6h |
-| Software Tester | 0h | 0h | 2h | 1h | 4h | 2h | 9h |
-| Software Integration Tester | 0h | 0h | 0h | 0h | 2h | 1h | 3h |
-| Software Qualification Tester | 0h | 0h | 0h | 0h | 3h | 1h | 4h |
-| **Subtotal** | **9h** | **6h** | **14h** | **7h** | **14h** | **18.5h** | **68.5h** |
+| Role | M1 | M2 | M3 | M4 | M5 | M6-CA (Plan) | M6-CA (Actual) | Total |
+|---|---|---|---|---|---|---|---|---|
+| Project Manager | 2h | 1h | 1h | 1h | 2h | 10.5h | 13.5h | 21.5h |
+| Requirements Engineer | 6h | 1h | 0h | 0h | 1h | 2h | 3h | 13h |
+| Software Architect | 1h | 4h | 1h | 0h | 1h | 1h | 1.5h | 9.5h |
+| Software Designer/Engineer | 0h | 0h | 8h | 1h | 1h | 1h | 2h | 13h |
+| Software Integrator | 0h | 0h | 2h | 4h | 0h | 0h | 0h | 6h |
+| Software Tester | 0h | 0h | 2h | 1h | 4h | 2h | 4h | 13h |
+| Software Integration Tester | 0h | 0h | 0h | 0h | 2h | 1h | 1h | 4h |
+| Software Qualification Tester | 0h | 0h | 0h | 0h | 3h | 1h | 1.5h | 5.5h |
+| **Subtotal** | **9h** | **6h** | **14h** | **7h** | **14h** | **18.5h** | **26.5h** | **94.5h** |
 
 ---
 
