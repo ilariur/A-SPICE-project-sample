@@ -28,8 +28,7 @@
 
 ## Data Structures
 - `CanFrame`: fixed 8-byte CAN frame wrapper
-- `ControllerConfig`: thresholds, poll interval, and registry bound
-- `ControllerConfig`: thresholds, poll interval, response timeout, and registry bound
+- `ControllerConfig`: thresholds (`dayThresholdLux`, `nightThresholdLux`), poll interval (`pollIntervalMs`), response timeout (`responseTimeoutMs`), and registry bound (8 subscribers)
 - Subscriber registry: `std::array<uint8_t, 8>` plus count
 
 ## Error Handling
@@ -44,7 +43,8 @@
 
 | File | Primary Requirements |
 |---|---|
-| `src/can_protocol.hpp` | SWE-003, SWE-007 |
+| `src/can_protocol.hpp` | SWE-003, SWE-007, SWE-011 |
 | `src/day_night_controller.hpp` | SWE-001, SWE-003, SWE-006 |
-| `src/day_night_controller.cpp` | SWE-002, SWE-004, SWE-005, SWE-007, SWE-008, SWE-009, SWE-010 |
-| `tests/day_night_controller_tests.cpp` | SWE-012 |
+| `src/day_night_controller.cpp` | SWE-001, SWE-002, SWE-004, SWE-005, SWE-007, SWE-008, SWE-009, SWE-010, SWE-011 |
+| `src/main.cpp` | SWE-013 |
+| `tests/day_night_controller_tests.cpp` | SWE-012, SWE-013 |
