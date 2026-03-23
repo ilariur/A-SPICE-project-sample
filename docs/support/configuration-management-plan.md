@@ -34,9 +34,11 @@
   - Full traceability matrix reconciled
 - **Baseline Tag v0.1.0-draft:**
   - Commit: `44a7d7ccd265a98fc03ec37c7fcb35a79345bacc`
-  - Contents: SWE-001 through SWE-011 implemented; unit tests (SWE.4) verified; audit-ready framework established
-  - Assessment: A-SPICE assessment 2026-03-23; corrective action phase M6 established
-  - Status: Draft release; available for extended review and test progression
+  - Contents: SWE-001 through SWE-011 implemented; unit tests (SWE.4) verified; integration tests (SWE.5); qualification tests (SWE.6); all risk ratings and problem resolutions documented
+  - Assessment Date: 2026-03-23
+  - Corrective Action Phase: M6 completed 2026-03-25; all P0 and P1 CRs closed (CR-001 through CR-010)
+  - Quality Gates Passed: 14 unit tests passed, 12 integration tests passed, 11 qualification tests passed; all documented evidence captured
+  - Status: **Pre-Release Draft** — audit-ready; prepared for extended vehicle integration testing; P1 baseline stable for external review
 
 ## Change Control
 - Record changes to requirements, architecture, code, and tests in the same baseline review.
