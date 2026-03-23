@@ -35,5 +35,14 @@ ninja -f build.ninja
 - `docs/test`: unit, integration, and qualification specifications plus executable evidence reports
 - `docs/support`: supporting process artifacts
 - `docs/traceability`: traceability matrix
+- `.github/skills`: versioned role skills used for A-SPICE workflow steps
 - `src`: implementation
 - `tests`: self-contained verification executable
+
+## Skill Versioning
+
+This repository vendors the role skills under `.github/skills`.
+
+- When a skill is updated, commit the corresponding `SKILL.md` change in the same branch.
+- Keep skill updates traceable with a commit message that names the role (for example: `Update software-tester skill timeout guidance`).
+- If a process change affects requirements, architecture, or tests, update the related project documents in the same commit set.
