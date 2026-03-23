@@ -50,6 +50,7 @@
 - `docs/support/configuration-management-plan.md`
 - `docs/support/quality-assurance-plan.md`
 - `docs/support/problem-resolution-log.md`
+- `docs/support/change-request-log.md`
 - `docs/traceability/traceability-matrix.md`
 
 ## Baseline Status
