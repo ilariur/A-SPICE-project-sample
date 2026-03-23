@@ -16,6 +16,27 @@
 ## Identification
 - Version tag format: `major.minor.patch-stage`
 - Current baseline: `0.1.0-draft`
+- Git tag type: Annotated tags with message describing contents and purpose
+- Tag naming convention: 
+  - `v{major}.{minor}.{patch}-{stage}`
+  - Example: `v0.1.0-draft` (0.1.0 release, draft maturity)
+  - Stages: `draft` (development), `rc` (release candidate), `release` (production)
+
+## Tagging Policy
+- **When to Tag:** After baseline assessment completion and management sign-off of release readiness.
+- **Tag Scope:** Marks all configuration items (source, build, documentation) at a specific commitment and approval point.
+- **Tag Recipient:** Baseline commits remain unmodified; tags are annotations applied post-hoc.
+- **Release Gate Criteria:**
+  - All P0-Critical corrective actions closed
+  - All P1-Major corrective actions closed
+  - No open defects blocking release-level quality gate
+  - Risk register reviewed and accepted for residual risk
+  - Full traceability matrix reconciled
+- **Baseline Tag v0.1.0-draft:**
+  - Commit: `44a7d7ccd265a98fc03ec37c7fcb35a79345bacc`
+  - Contents: SWE-001 through SWE-011 implemented; unit tests (SWE.4) verified; audit-ready framework established
+  - Assessment: A-SPICE assessment 2026-03-23; corrective action phase M6 established
+  - Status: Draft release; available for extended review and test progression
 
 ## Change Control
 - Record changes to requirements, architecture, code, and tests in the same baseline review.
