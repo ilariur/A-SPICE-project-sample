@@ -13,8 +13,9 @@
 - `src/can_protocol.hpp`
 - `src/day_night_controller.hpp`
 - `src/day_night_controller.cpp`
-- `src/main.cpp`
-- `tests/day_night_controller_tests.cpp`
+- `src/main.cpp` (verification harness)
+- `tests/day_night_controller_tests.cpp` (unit verification executable)
+- `tests/day_night_simulation.cpp` (integration/qualification scenario runner)
 - All A-SPICE documents in `docs/`
 
 ## Smoke Checks
